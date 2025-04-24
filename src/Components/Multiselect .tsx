@@ -100,7 +100,7 @@ export default function Multiselect({
 								>
 									{selectedOptions.includes(opt.value) ? '✔️' : '⬜'}{' '}
 									{/* Отображаем символ выбора в зависимости от состояния */}
-									{opt.label} {/* Отображаем метку опции */}
+									{opt.label}
 								</div>
 							)
 						)
