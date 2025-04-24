@@ -6,7 +6,7 @@ import { Option } from './type.ts'
 
 function App() {
 	const [selectedOptions, setSelectedOptions] = useState<string[]>([]) // Состояние для хранения выбранных опций
-	const [option, setOption] = useState<Option[]>([]) // Состояние для хранения доступных опций
+	const [options, setOption] = useState<Option[]>([]) // Состояние для хранения доступных опций
 	useEffect(() => {
 		// Хук useEffect для выполнения побочных эффектов (в данном случае, для загрузки данных)
 		async function fetchData() {
@@ -29,9 +29,8 @@ function App() {
 	return (
 		<div className='app'>
 			{/* Основной контейнер приложения */}
-			<h1>Мультивыбор</h1> {/* Заголовок приложения */}
 			<Multiselect
-				option={option} // Передаем доступные опции в компонент Multiselect
+				options={options} // Передаем доступные опции в компонент Multiselect
 				selectedOptions={selectedOptions} // Передаем выбранные опции
 				onSelectChange={setSelectedOptions} // Передаем функцию для обновления выбранных опций
 				placeholder='Выберите временные зоны' // Устанавливаем текст-заполнитель для поля поиска

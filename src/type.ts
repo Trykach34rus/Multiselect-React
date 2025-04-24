@@ -5,7 +5,7 @@ export interface Option {
 }
 // Интерфейс для описания пропсов компонента Multiselect
 export interface MultiselectProps {
-	option: Option[] // Массив доступных опций для выбора
+	options: Option[] // Массив доступных опций для выбора
 	selectedOptions: string[] // Массив текущих выбранных опций (значения)
 	onSelectChange: (selected: string[]) => void // Функция обратного вызова для обновления выбранных опций
 	placeholder?: string // Необязательный текст-заполнитель для поля поиска
